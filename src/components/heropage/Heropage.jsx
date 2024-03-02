@@ -54,7 +54,7 @@ export default function Heropage() {
       <Slider {...settings} className=" iPhone6+and7+and8+:hidden iPhone4and4S:hidden" key={slidersdetails.id}>
                 {slidersdetails.map((image) => 
                     <div className="relative" key={image.id}>
-                        <Image src={image.download_url} alt={image.author} isZoomed isBlurred radius="none" className=" self-center brightness-50 h-[650px] w-[1600px] iPadPro10.5:w-[1024px] iPad1and2andMiniandAir:w-[800px] iPad1and2andMiniandAir:h-[400px]"/>
+                        <Image src={image.download_url} alt={image.author} isZoomed isBlurred radius="none" className=" self-center brightness-50 h-[650px] w-[1800px] iPadPro10.5:w-[1024px] iPad1and2andMiniandAir:w-[800px] iPad1and2andMiniandAir:h-[400px]"/>
                         <div id="content-sec" className="absolute z-10 top-[20%] right-[10%] max-w-[50%] text-right">
                           <h1 className="heading_text text-8xl text-white capitalize iPadPro12.9:text-6xl iPad1and2andMiniandAir:text-5xl iPhone6+and7+and8+:text-4xl iPhone6and6Sand7and8:text-3xl iPhone4and4S:text-xl">{image.heading}</h1>
                           <h2 id="subheading-tag" className="text-4xl iPadPro12.9:text-2xl iPad1and2andMiniandAir:text-xl iPhone6+and7+and8+:text-lg iPhone6and6Sand7and8:text-md iPhone4and4S:text-sm">{image.sub_heading}</h2>
