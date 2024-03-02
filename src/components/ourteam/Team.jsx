@@ -1,6 +1,5 @@
 import React from "react";
 import { team } from "../../_Details";
-import { DarkThemeToggle, Flowbite } from 'flowbite-react';
 
 //import avatar
 import { Avatar } from "@nextui-org/react";

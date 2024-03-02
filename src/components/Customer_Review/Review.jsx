@@ -14,7 +14,7 @@ function classNames(...classes) {
 export default function Review() {
   return (
     <div id="reviews">
-      <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:grid lg:max-w-7xl lg:grid-cols-12 lg:gap-x-8 lg:px-8 lg:py-32">
+      <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-24 lg:grid lg:max-w-7xl lg:grid-cols-12 lg:gap-x-8 lg:px-8 lg:py-32">
         <div className="lg:col-span-4">
           <h2 className="text-2xl font-bold tracking-tight">
             Customer Reviews
@@ -103,7 +103,7 @@ export default function Review() {
         <div className="mt-16 lg:col-span-7 lg:col-start-6 lg:mt-0">
           <h3 className="sr-only">Recent reviews</h3>
 
-          <div className="flow-root">
+          <div className="flow-root overflow-y-scroll max-h-[600px]">
             <div className="-my-12 divide-y divide-gray-200">
               {reviews.featured.map((review) => (
                 <div key={review.id} className="py-12">

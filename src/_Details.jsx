@@ -1,5 +1,12 @@
 // import components
-import { AcademicCapIcon, BanknotesIcon, CheckBadgeIcon, ClockIcon, ReceiptRefundIcon, UsersIcon, } from "@heroicons/react/24/outline";
+import {
+  AcademicCapIcon,
+  BanknotesIcon,
+  CheckBadgeIcon,
+  ClockIcon,
+  ReceiptRefundIcon,
+  UsersIcon,
+} from "@heroicons/react/24/outline";
 
 // import data
 export const menuItems = [
@@ -142,31 +149,35 @@ export const team = [
     job_role: "Senior Project Head",
     image_url: "https://i.postimg.cc/Pf0gtjyh/tonu-bhaiya.jpg",
     linkedinId: "",
-    githubId:"https://github.com/",
+    githubId: "https://github.com/",
   },
   {
     id: 1,
     name: "Prashant Saraswat",
     job_role: "Project Manager",
     image_url: "https://i.postimg.cc/63jZxzxb/prashant.png",
-    linkedinId: "https://www.linkedin.com/in/prasant-sarswat-24b96b12b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    githubId:"https://github.com/21tushar",
+    linkedinId:
+      "https://www.linkedin.com/in/prasant-sarswat-24b96b12b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    githubId: "https://github.com/21tushar",
   },
   {
     id: 2,
     name: "Shivam Sharma",
     job_role: "Marketing Head",
     image_url: "https://i.postimg.cc/4yHYkg5n/shivam.png",
-    linkedinId: "https://www.linkedin.com/in/shivam-sharma-375148283?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    githubId:"https://github.com/shiva8769",
+    linkedinId:
+      "https://www.linkedin.com/in/shivam-sharma-375148283?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    githubId: "https://github.com/shiva8769",
   },
   {
     id: 3,
     name: "Mohit Saraswat",
     job_role: "Marketing Head (CRM)",
-    image_url:"https://i.postimg.cc/P52VcFJJ/IMG-20240220-110025-removebg-preview.png",
-    linkedinId: "https://www.linkedin.com/in/mohit-saraswat-60b1a1216?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    githubId:"https://github.com/mohit-art11",
+    image_url:
+      "https://i.postimg.cc/P52VcFJJ/IMG-20240220-110025-removebg-preview.png",
+    linkedinId:
+      "https://www.linkedin.com/in/mohit-saraswat-60b1a1216?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    githubId: "https://github.com/mohit-art11",
   },
   {
     id: 4,
@@ -174,7 +185,7 @@ export const team = [
     job_role: "React Developer",
     image_url: "",
     linkedinId: "https://www.linkedin.com",
-    githubId:"https://github.com/RudraniJadaun",
+    githubId: "https://github.com/RudraniJadaun",
   },
   {
     id: 5,
@@ -182,23 +193,25 @@ export const team = [
     job_role: "Front-end Developer",
     image_url: "https://i.postimg.cc/2jKJ1V7K/farheen.png",
     linkedinId: "https://www.linkedin.com",
-    githubId:"https://github.com/shoyebakhan",
+    githubId: "https://github.com/shoyebakhan",
   },
   {
     id: 6,
     name: "Kanishka Singhal",
     job_role: "JS Developer",
-    image_url:"https://i.postimg.cc/yd4kFhhf/Whats-App-Image-2024-02-14-at-13-16-29-b17ebaf4-removebg-preview.png",
+    image_url:
+      "https://i.postimg.cc/yd4kFhhf/Whats-App-Image-2024-02-14-at-13-16-29-b17ebaf4-removebg-preview.png",
     linkedinId: "https://www.linkedin.com",
-    githubId:"https://github.com/",
+    githubId: "https://github.com/",
   },
   {
     id: 7,
     name: "Aayush Goyal",
     job_role: "Front-end Developer",
-    image_url: "https://i.postimg.cc/jjSmSYmy/IMG-20240220-105822-removebg-preview-1.png",
+    image_url:
+      "https://i.postimg.cc/jjSmSYmy/IMG-20240220-105822-removebg-preview-1.png",
     linkedinId: "https://www.linkedin.com",
-    githubId:"https://github.com/gaayush234",
+    githubId: "https://github.com/gaayush234",
   },
   {
     id: 8,
@@ -206,7 +219,7 @@ export const team = [
     job_role: "Full Stack Developer",
     image_url: "https://i.postimg.cc/WpGcxsfq/hemant.png",
     linkedinId: "https://www.linkedin.com",
-    githubId:"https://github.com/hemant-7802",
+    githubId: "https://github.com/hemant-7802",
   },
   {
     id: 9,
@@ -214,7 +227,7 @@ export const team = [
     job_role: "MERN Stack Developer",
     image_url: "https://i.postimg.cc/Jn8vSJZS/karan.jpg",
     linkedinId: "https://www.linkedin.com",
-    githubId:"https://github.com/karan0617",
+    githubId: "https://github.com/karan0617",
   },
   {
     id: 10,
@@ -222,8 +235,7 @@ export const team = [
     job_role: "Front-end Developer",
     image_url: "https://i.postimg.cc/pTSW6sQQ/salmon.jpg",
     linkedinId: "https://www.linkedin.com",
-    githubId:"https://github.com/",
-
+    githubId: "https://github.com/",
   },
   {
     id: 11,
@@ -231,7 +243,7 @@ export const team = [
     job_role: "Front-end Developer",
     image_url: "https://i.postimg.cc/RhtpKTMV/sufiyan.jpg",
     linkedinId: "https://www.linkedin.com",
-    githubId:"https://github.com/",
+    githubId: "https://github.com/",
   },
   {
     id: 12,
@@ -239,8 +251,8 @@ export const team = [
     job_role: "Figma Designer",
     image_url:
       "https://i.postimg.cc/jSDwyLp5/Whats-App-Image-2024-02-20-at-11-20-21-626d6355-removebg-preview.png",
-      linkedinId: "https://www.linkedin.com",
-      githubId:"https://github.com/",
+    linkedinId: "https://www.linkedin.com",
+    githubId: "https://github.com/",
   },
   {
     id: 13,
@@ -248,8 +260,8 @@ export const team = [
     job_role: "Front-end Developer",
     image_url:
       "https://i.postimg.cc/nLfryTW8/IMG-20240220-111228-removebg-preview.png",
-      linkedinId: "https://www.linkedin.com",
-      githubId:"https://github.com/tashujain",
+    linkedinId: "https://www.linkedin.com",
+    githubId: "https://github.com/tashujain",
   },
   {
     id: 14,
@@ -257,15 +269,17 @@ export const team = [
     job_role: "Template Designer",
     image_url: "https://i.postimg.cc/1tVhfs66/Abbas-removebg.png",
     linkedinId: "https://www.linkedin.com",
-    githubId:"https://github.com/",
+    githubId: "https://github.com/",
   },
   {
     id: 15,
     name: "Arpit Jain",
     job_role: "Front-end Developer",
-    image_url: "https://i.postimg.cc/50DM2qqt/IMG-20240221-003305-204-removebg-preview.png",
-    linkedinId: "https://www.linkedin.com/in/arpit-jain-6193792b6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    githubId:"https://github.com/arpitjainkarauli",
+    image_url:
+      "https://i.postimg.cc/50DM2qqt/IMG-20240221-003305-204-removebg-preview.png",
+    linkedinId:
+      "https://www.linkedin.com/in/arpit-jain-6193792b6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    githubId: "https://github.com/arpitjainkarauli",
   },
   {
     id: 16,
@@ -273,7 +287,7 @@ export const team = [
     job_role: "Front-end Developer",
     image_url: "https://i.postimg.cc/YCVMz8hw/priyanshi.png",
     linkedinId: "https://www.linkedin.com",
-    githubId:"https://github.com/",
+    githubId: "https://github.com/",
   },
 ];
 
@@ -417,6 +431,74 @@ export const reviews = {
       avatarSrc:
         "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80",
     },
+    {
+      id: 5,
+      rating: 5,
+      content: `
+          <p>This is the bag of my dreams. I took it on my last vacation and was able to fit an absurd amount of snacks for the many long and hungry flights.</p>
+        `,
+      author: "Kanishk Jain",
+      avatarSrc:
+        "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80",
+    },
+    {
+      id: 6,
+      rating: 5,
+      content: `
+          <p>This is the bag of my dreams. I took it on my last vacation and was able to fit an absurd amount of snacks for the many long and hungry flights.</p>
+        `,
+      author: "Ayush Goyal",
+      avatarSrc:
+        "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80",
+    },
+    {
+      id: 7,
+      rating: 5,
+      content: `
+          <p>This is the bag of my dreams. I took it on my last vacation and was able to fit an absurd amount of snacks for the many long and hungry flights.</p>
+        `,
+      author: "Karan jadoun",
+      avatarSrc:
+        "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80",
+    },
     // More reviews...
   ],
 };
+
+export const signupAttribute = [
+  {
+      id: "name",
+      name: "name",
+      type: "name",
+      autoComplete: "name",
+      placeholder: "Enter Full Name",
+    },
+    {
+      id: "email",
+      name: "email",
+      type: "email",
+      autoComplete: "email",
+      placeholder: "Enter Your Email Address",
+    },
+    {
+      id: "number",
+      name: "number",
+      type: "number",
+      autoComplete: "number",
+      placeholder: "Mobile Number",
+    },
+    {
+      id: "password",
+      name: "password",
+      type: "password",
+      autoComplete: "password",
+      placeholder: "Enter Your Password",
+    },
+    {
+      id: "cnfpassword",
+      name: "cnfpassword",
+      type: "password",
+      autoComplete: "password",
+      placeholder: "Confirm-Password",
+    },
+];
