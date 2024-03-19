@@ -116,6 +116,7 @@ export default function Nav() {
           </Link>
         </NavbarItem>
         <NavbarItem>
+          
             <SignupButton/>
         </NavbarItem>
       </NavbarContent>

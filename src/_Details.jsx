@@ -225,7 +225,7 @@ export const team = [
     id: 9,
     name: "Karan Jadaun",
     job_role: "MERN Stack Developer",
-    image_url: "https://i.postimg.cc/Z5Fm346h/i2-removebg.png",
+    image_url: "https://i.postimg.cc/Jn8vSJZS/karan.jpg",
     linkedinId: "https://www.linkedin.com",
     githubId: "https://github.com/karan0617",
   },
