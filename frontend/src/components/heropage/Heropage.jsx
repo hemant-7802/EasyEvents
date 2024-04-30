@@ -73,7 +73,11 @@ export default function Heropage({ className }) {
         <div className="absolute z-10 top-[25%] left-[5%] max-w-[100%] text-left">
           <h1 className="text-4xl uppercase">{mobiledetails[0].heading}</h1>
           <h2 id="mobile_subtitle" className="text-2xl my-2">{mobiledetails[0].sub_heading}</h2>
-          <Button className="bg-emerald-900 text-white"><Link to={"/signup"}>GET STARTED FOR FREE <FaArrowRightLong className="inline-block justify-end self-center" /></Link></Button>
+          <Link to={"/signup"}>
+            <Button className="bg-emerald-900 text-white">
+              GET STARTED FOR FREE <FaArrowRightLong className="inline-block justify-end self-center" />
+            </Button>
+          </Link>
         </div>
       </div>
     </div>
