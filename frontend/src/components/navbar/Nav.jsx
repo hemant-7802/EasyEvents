@@ -103,7 +103,7 @@ export default function Nav() {
         </NavbarItem>
         <NavbarItem>
           <Link to={"/login"} color="secondary" className={`font-medium text-secondary-600 hover:text-secondary-400 ${authUser ? "hidden" : "flex"}`}>
-            Login
+            <Button variant="flat" color="secondary" className="bg-transparent font-bold text-md">Login</Button>
           </Link>
         </NavbarItem>
         <NavbarItem className="hidden lg:flex">
@@ -114,7 +114,7 @@ export default function Nav() {
       </NavbarContent>
 
 
-      <NavbarContent as="div" justify="end" className={`${authUser ? "flex":"hidden"}`}>
+      <NavbarContent as="div" justify="end" className={`${authUser ? "flex" : "hidden"}`}>
         <Dropdown placement="bottom-end">
           <DropdownTrigger>
             <Avatar

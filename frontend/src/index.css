@@ -12,20 +12,20 @@
 * {
   scroll-behavior: smooth;
 }
+
 .slider-container h1 {
   font-family: "Protest Revolution", sans-serif;
   background: rgb(255, 69, 221);
-  background: radial-gradient(
-    circle,
-    rgba(255, 96, 225, 1) 0%,
-    rgba(255, 194, 124, 1) 35%,
-    rgba(183, 207, 148, 1) 61%,
-    rgba(80, 89, 210, 1) 87%,
-    rgba(68, 0, 255, 1) 100%
-  );
+  background: radial-gradient(circle,
+      rgba(255, 96, 225, 1) 0%,
+      rgba(255, 194, 124, 1) 35%,
+      rgba(183, 207, 148, 1) 61%,
+      rgba(80, 89, 210, 1) 87%,
+      rgba(68, 0, 255, 1) 100%);
   -webkit-background-clip: text;
   color: transparent;
 }
+
 .slider-container h2 {
   font-family: "Agbalumo", system-ui;
   font-weight: 400;
@@ -33,6 +33,7 @@
   margin-bottom: 8px;
   color: darkseagreen;
 }
+
 .slider-container p {
   font-family: "Ysabeau Infant", sans-serif;
   font-optical-sizing: auto;
@@ -40,9 +41,11 @@
   font-style: normal;
   color: lightsteelblue;
 }
+
 .slider-container Button {
   font-family: "Salsa", cursive;
 }
+
 #mobile_subtitle {
   font-family: "Ysabeau Infant", sans-serif;
   font-optical-sizing: auto;
@@ -50,12 +53,15 @@
   font-style: normal;
   color: lightsteelblue;
 }
+
 .slick-dots button:before {
   color: purple !important;
 }
+
 .slick-dots li.slick-active button:before {
   color: rgb(193, 0, 193) !important;
 }
+
 #team_heading {
   font-family: "Tektur", sans-serif;
   font-optical-sizing: auto;
@@ -63,11 +69,13 @@
   font-style: normal;
   font-variation-settings: "wdth" 100;
 }
+
 #name-tag {
   font-family: "Salsa", cursive;
   font-weight: 400;
   font-style: normal;
 }
+
 .discription_text {
   font-family: monospace;
 }
@@ -93,17 +101,39 @@
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  background: -webkit-linear-gradient(#9a3737, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    margin: 0; 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
 }
 
-.signupImg{
-  -webkit-filter : invert(.5);
+.signupImg {
+  -webkit-filter: invert(.5);
   filter: invert(.5);
+}
+
+.login-btn, .signup-btn, .query-btn {
+  background-image: linear-gradient(to right, #6a3093 0%, #a044ff 51%, #6a3093 100%);
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.login-btn:hover, .signup-btn:hover, .query-btn:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
 }

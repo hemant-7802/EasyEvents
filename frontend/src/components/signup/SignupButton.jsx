@@ -10,7 +10,7 @@ function SignupButton() {
 
   return (
     <>
-      <Button color="secondary" variant="flat" className={`${authUser ? "hidden" : "flex"}`}>
+      <Button color="secondary" variant="flat" className={`${authUser ? "hidden" : "flex"} font-semibold`}>
         Sign Up
       </Button>
       <Modal
