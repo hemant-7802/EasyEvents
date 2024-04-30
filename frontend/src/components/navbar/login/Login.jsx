@@ -21,9 +21,9 @@ export default function Login() {
   }
 
   return (
-    <div className="flex justify-center h-screen items-center">
+    <div className="flex justify-center h-screen items-center ">
       <div className='w-[500px] py-10 px-4 rounded-lg shadow-xl shadow-gray-900 flex flex-col items-center justify-center min-w-[290px] gap-2'>
-        <h1 className='text-3xl mb-8 font-semibold text-center text-gray-300'>Login <span className='text-blue-500'>EasyEvent</span></h1>
+        <h1 className='text-3xl mb-8 font-semibold text-center text-gray-300'>Login <span className='text-purple-500'>EasyEvent</span></h1>
         <form method="POST" onSubmit={handleSubmit} className='w-[90%] flex flex-col gap-4'>
           <Input
             endContent={
@@ -31,7 +31,6 @@ export default function Login() {
             }
             placeholder="Enter your email"
             variant="underlined"
-            isRequired
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
@@ -42,15 +41,14 @@ export default function Login() {
             placeholder="Enter your password"
             type="password"
             variant="underlined"
-            isRequired
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
           <div className='text-right text-sm'>
-            <p>Don't have an account? <span className='text-fuchsia-500 font-medium underline underline-offset-2 hover:text-fuchsia-600 transition-all duration-150'><Link to="/signup">Sign Up</Link></span></p>
+            <p>Don't have an account? <span className='text-purple-500 font-medium underline underline-offset-2 hover:text-purple-600 transition-all duration-150'><Link to="/signup">Sign Up</Link></span></p>
           </div>
           <div className='w-full'>
-            <Button type="submit" className={`login-btn bg-sky-500 rounded-lg w-full p-2 hover:bg-sky-600 text-gray-300`} disabled={loading}>
+            <Button type="submit" className={`login-btn bg-sky-500 rounded-lg w-full py-1 hover:bg-sky-600 text-gray-300`} disabled={loading}>
               {loading ? <Spinner color="primary" /> : "Login"}
             </Button>
           </div>

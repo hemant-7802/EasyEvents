@@ -56,8 +56,8 @@ export default function Signup() {
   }
 
   return (
-    <div className="flex min-h-full flex-1">
-      <div className="flex flex-1 flex-col justify-center px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
+    <div className="flex h-screen flex-1 p-4">
+      <div className="flex flex-1 flex-col justify-center px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24 shadow-lg rounded-t-lg">
         <div className="mx-auto w-full max-w-sm lg:w-96">
           <div>
             <img
@@ -66,7 +66,7 @@ export default function Signup() {
               alt="Your Company"
             />
             <h2 className="mt-2 text-3xl font-[600] leading-9 tracking-tight">
-              Register With Us
+              <span className="text-purple-500">Register</span> With Us
             </h2>
           </div>
 
@@ -83,7 +83,7 @@ export default function Signup() {
                 <div className="mt-2">
                   <button
                     type="submit"
-                    className={`w-full justify-center rounded-md bg-purple-700 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-purple-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2`}
+                    className={`signup-btn w-full justify-center rounded-md bg-purple-700 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-purple-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2`}
                     disabled={loading}
                   >
                     {loading ? <Spinner color="primary" /> : "Register"}
@@ -155,7 +155,7 @@ export default function Signup() {
       </div>
       <div className="relative hidden w-0 flex-1 lg:block">
         <img
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-0 h-full w-full object-cover rounded-r-lg shadow-lg"
           src="https://i.postimg.cc/Vk7ZBhH3/pexels-marina-utrabo-1729797.jpg"
           alt=""
         />

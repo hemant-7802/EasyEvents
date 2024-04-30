@@ -82,7 +82,7 @@ function Map_contact() {
               <FaPhoneAlt className="text-lg text-default-400 pointer-events-none flex-shrink-0" />
             } />
         </form>
-        <Button color="secondary" className='w-[150px]'>Send Query</Button>
+        <Button color="secondary" className='query-btn w-[150px]'>Send Query</Button>
       </div>
     </div>
   )

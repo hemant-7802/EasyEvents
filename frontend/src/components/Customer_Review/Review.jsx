@@ -100,10 +100,10 @@ export default function Review() {
           </div>
         </div>
 
-        <div className="mt-16 lg:col-span-7 lg:col-start-6 lg:mt-0">
-          <h3 className="sr-only">Recent reviews</h3>
+        <div className="mt-16 lg:col-span-7 lg:col-start-6 lg:mt-0 bg-gray-50 p-4">
+          <h3 className="pb-2 shadow-md w-full px-4 rounded-md text-center font-semibold">Recent reviews</h3>
 
-          <div className="flow-root overflow-y-scroll max-h-[600px]">
+          <div className="flow-root overflow-y-scroll max-h-[600px] mt-2">
             <div className="-my-12 divide-y divide-gray-200">
               {reviews.featured.map((review) => (
                 <div key={review.id} className="py-12">
