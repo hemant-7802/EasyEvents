@@ -132,6 +132,9 @@ export default function Nav() {
               <p className="font-semibold">Signed in as</p>
               <p className="font-semibold">{authUser ? authUser.email : ""}</p>
             </DropdownItem>
+            {/* <DropdownItem key="profile" className="h-14 gap-2">
+              <p className="font-semibold">{<TimeInput />}</p>
+            </DropdownItem> */}
             <DropdownItem key="help_and_feedback">Help & Feedback</DropdownItem>
             <DropdownItem key="logout" color="danger" onClick={logout}>
               Log Out
