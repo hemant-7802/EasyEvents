@@ -11,8 +11,11 @@ import { FaArrowRightLong } from "react-icons/fa6";
 // import details
 import { slidersdetails, mobiledetails } from "../../_Details";
 import { Link } from "react-router-dom";
+import { useAuthContext } from "../../context/authContext";
 
 export default function Heropage({ className }) {
+  const { authUser } = useAuthContext()
+
   const settings = {
     className: "center",
     centerMode: true,
@@ -59,9 +62,9 @@ export default function Heropage({ className }) {
               <h1 className="heading_text text-8xl text-white capitalize iPadPro12.9:text-6xl iPad1and2andMiniandAir:text-5xl iPhone6+and7+and8+:text-4xl iPhone6and6Sand7and8:text-3xl iPhone4and4S:text-xl">{image.heading}</h1>
               <h2 id="subheading-tag" className="text-4xl iPadPro12.9:text-2xl iPad1and2andMiniandAir:text-xl iPhone6+and7+and8+:text-lg iPhone6and6Sand7and8:text-md iPhone4and4S:text-sm">{image.sub_heading}</h2>
               <p className="text-2xl my-3 text-white/80 iPadPro12.9:text-md iPad1and2andMiniandAir:text-sm iPhone6and6Sand7and8:hidden iPhone4and4S:hidden">{image.disc}</p>
-              <Link to={"/signup"}>
-                <Button className="bg-emerald-900 text-white">
-                  GET STARTED FOR FREE <FaArrowRightLong className="inline-block justify-end self-center" />
+              <Link to={authUser ? "/" : "/signup"}>
+                <Button className="bg-emerald-900 text-white capitalize">
+                  {authUser ? `click here to explore` : `GET STARTED FOR FREE`} <FaArrowRightLong className="inline-block justify-end self-center" />
                 </Button>
               </Link>
             </div>
@@ -73,9 +76,9 @@ export default function Heropage({ className }) {
         <div className="absolute z-10 top-[25%] left-[5%] max-w-[100%] text-left">
           <h1 className="text-4xl uppercase">{mobiledetails[0].heading}</h1>
           <h2 id="mobile_subtitle" className="text-2xl my-2">{mobiledetails[0].sub_heading}</h2>
-          <Link to={"/signup"}>
-            <Button className="bg-emerald-900 text-white">
-              GET STARTED FOR FREE <FaArrowRightLong className="inline-block justify-end self-center" />
+          <Link to={authUser ? "/" : "/signup"}>
+            <Button className="bg-emerald-900 text-white capitalize">
+              {authUser ? `click here to explore` : `GET STARTED FOR FREE`} <FaArrowRightLong className="inline-block justify-end self-center" />
             </Button>
           </Link>
         </div>

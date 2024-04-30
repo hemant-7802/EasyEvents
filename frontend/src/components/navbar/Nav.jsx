@@ -146,8 +146,17 @@ export default function Nav() {
       <NavbarMenu>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
-
-            <Link onClick={() => item.name === <Login /> ? setIsMenuOpen(isMenuOpen) : setIsMenuOpen(!isMenuOpen)}
+            <ul className="w-full">
+              <ll
+                color="foreground"
+                className="w-full hover:bg-purple-200"
+                onClick={() => item.name === <Login /> ? setIsMenuOpen(isMenuOpen) : setIsMenuOpen(!isMenuOpen)}
+                href={item.href}
+              >
+                {item.name}
+              </ll>
+            </ul>
+            {/* <Link onClick={() => item.name === <Login /> ? setIsMenuOpen(isMenuOpen) : setIsMenuOpen(!isMenuOpen)}
               className="w-full hover:bg-purple-200"
               color={
                 index === menuItems.length - 1 ? "secondary" : "foreground"
@@ -156,7 +165,7 @@ export default function Nav() {
               size="lg"
             >
               {item.name}
-            </Link>
+            </Link> */}
           </NavbarMenuItem>
         ))}
       </NavbarMenu>

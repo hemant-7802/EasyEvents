@@ -16,9 +16,6 @@ const LoginHome = () => {
       <Nav />
       <Heropage />
       <Categories />
-      {/* <Routes>
-        <Route path='/' element={<Categories />} />
-      </Routes> */}
       <WhyUs />
       <Team />
       <Review />
