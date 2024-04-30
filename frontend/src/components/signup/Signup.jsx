@@ -5,6 +5,7 @@ import React, { useState, useEffect } from "react";
 import { googleLogout, useGoogleLogin } from "@react-oauth/google";
 import axios from "axios";
 import useSignup from "../../hooks/useSignup";
+import { Link } from "react-router-dom"
 
 export default function Signup() {
   const [user, setUser] = useState([]);
@@ -79,6 +80,9 @@ export default function Signup() {
                   <Input variant="underlined" id="mobileNo" name="mobileNo" type="number" autoComplete="mobileNo" placeholder="Enter Your Contact Number" onChange={(e) => setInputs({ ...inputs, mobileNo: e.target.value })} value={inputs.mobileNo} />
                   <Input variant="underlined" id="password" name="password" type="password" autoComplete="password" placeholder="Enter Your Password" onChange={(e) => setInputs({ ...inputs, password: e.target.value })} value={inputs.password} />
                   <Input variant="underlined" id="confirmPassword" name="confirmPassword" type="password" autoComplete="confirmPassword" placeholder="Confirm Password" onChange={(e) => setInputs({ ...inputs, confirmPassword: e.target.value })} value={inputs.confirmPassword} />
+                </div>
+                <div className='text-right text-sm'>
+                  <p>Already have an account? <span className='text-purple-500 font-medium underline underline-offset-2 hover:text-purple-600 transition-all duration-150'><Link to="/login">Login</Link></span></p>
                 </div>
                 <div className="mt-2">
                   <button

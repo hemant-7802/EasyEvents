@@ -49,7 +49,7 @@ export default function Login() {
           </div>
           <div className='w-full'>
             <Button type="submit" className={`login-btn bg-sky-500 rounded-lg w-full py-1 hover:bg-sky-600 text-gray-300`} disabled={loading}>
-              {loading ? <Spinner color="primary" /> : "Login"}
+              {loading ? <Spinner color="default" /> : "Login"}
             </Button>
           </div>
         </form>
