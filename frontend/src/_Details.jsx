@@ -218,7 +218,7 @@ export const team = [
     name: "Hemant Bhargav",
     job_role: "Full Stack Developer",
     image_url: "https://i.postimg.cc/WpGcxsfq/hemant.png",
-    linkedinId: "https://www.linkedin.com",
+    linkedinId: "https://www.linkedin.com/in/hemant-bhargav-262720306?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app ",
     githubId: "https://github.com/hemant-7802",
   },
   {

@@ -1,5 +1,5 @@
 // import library
-import React, { useState } from "react";
+import React from "react";
 
 // impot component
 import {
@@ -18,42 +18,16 @@ import {
   Dropdown,
 } from "@nextui-org/react";
 import { ThemeSwitcher } from "../themeSwitcher/ThemeSwitcher";
-import Login from "./login/Login"
 import SignupButton from "../signup/SignupButton";
 import { Link } from "react-router-dom";
 import { useAuthContext } from "../../context/authContext";
 import useLogout from "../../hooks/useLogout";
+import { menuItems } from "../../_Details";
 
 export default function Nav() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const { authUser } = useAuthContext()
   const { loading, logout } = useLogout()
-
-  const menuItems = [
-    {
-      name: "Home",
-      href: "#home",
-    },
-    {
-      name: "Services",
-      href: "#services",
-    },
-    {
-      name: "Our Team",
-      href: "#team",
-    },
-    {
-      name: "Reviews",
-      href: "#reviews",
-    },
-    {
-      name: "Contact Us",
-      href: "#contactus",
-    },
-    {
-      name: "Login",
-    }
-  ];
 
   return (
     <Navbar
@@ -89,10 +63,10 @@ export default function Nav() {
           />
         </NavbarBrand>
         {menuItems.map((menuitem, index) => (
-          <NavbarItem>
-            <Link color="foreground" href={menuitem.href} className={index === menuItems.length - 1 ? "hidden" : "block"}>
+          <NavbarItem key={menuitem.name} className={`${authUser ? (`${index === 2 ? 'hidden' : 'block'}`) : ''} hover:text-purple-800 font-medium py-1 px-1.5 hover:scale-105 transition-all duration-100 cursor-pointer`}>
+            <a color="foreground" href={menuitem.href}>
               {menuitem.name}
-            </Link>
+            </a>
           </NavbarItem>
         ))}
       </NavbarContent>
@@ -132,11 +106,8 @@ export default function Nav() {
               <p className="font-semibold">Signed in as</p>
               <p className="font-semibold">{authUser ? authUser.email : ""}</p>
             </DropdownItem>
-            {/* <DropdownItem key="profile" className="h-14 gap-2">
-              <p className="font-semibold">{<TimeInput />}</p>
-            </DropdownItem> */}
             <DropdownItem key="help_and_feedback">Help & Feedback</DropdownItem>
-            <DropdownItem key="logout" color="danger" onClick={logout}>
+            <DropdownItem key="logout" color="danger" onClick={logout} >
               Log Out
             </DropdownItem>
           </DropdownMenu>
@@ -145,27 +116,15 @@ export default function Nav() {
 
       <NavbarMenu>
         {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
-            <ul className="w-full">
-              <ll
-                color="foreground"
-                className="w-full hover:bg-purple-200"
-                onClick={() => item.name === <Login /> ? setIsMenuOpen(isMenuOpen) : setIsMenuOpen(!isMenuOpen)}
-                href={item.href}
-              >
-                {item.name}
-              </ll>
-            </ul>
-            {/* <Link onClick={() => item.name === <Login /> ? setIsMenuOpen(isMenuOpen) : setIsMenuOpen(!isMenuOpen)}
-              className="w-full hover:bg-purple-200"
-              color={
-                index === menuItems.length - 1 ? "secondary" : "foreground"
-              }
+          <NavbarMenuItem key={`${item}-${index}`} className="w-full hover:bg-purple-100 py-1 px-1.5 hover:scale-105 transition-all duration-100">
+            <a onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="w-full"
+              color="foreground"
               href={item.href}
               size="lg"
             >
               {item.name}
-            </Link> */}
+            </a>
           </NavbarMenuItem>
         ))}
       </NavbarMenu>

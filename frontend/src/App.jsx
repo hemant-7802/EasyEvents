@@ -2,7 +2,6 @@ import React from "react";
 import { useAuthContext } from "./context/authContext";
 import { Routes, Route, Navigate } from "react-router-dom"
 import Home from "./pages/home/Home";
-import LoginHome from "./pages/home/LoginHome";
 import { Toaster } from "react-hot-toast";
 import Login from "./components/navbar/login/Login";
 import Signup from "./components/signup/Signup";
@@ -22,15 +21,16 @@ import Mare from "./components/cards/Mare";
 import Menswear from "./components/cards/Menswear";
 import Womenswear from "./components/cards/Womenswear";
 import Nurseries from "./components/cards/Nurseries";
-import Categories from "./components/category/Categories";
+import Nav from "./components/navbar/Nav";
+import Footer from "./components/footer/Footer";
 
 export default function App() {
   const { authUser } = useAuthContext()
   return (
     <>
+      <Nav />
       <Routes>
-        <Route path="/" element={authUser ? <LoginHome /> : <Navigate to={"/home"} />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/" handle={(e) => e.render()} element={<Home />} />
         <Route path="/login" element={authUser ? <Navigate to={'/'} /> : <Login />} />
         <Route path="/signup" element={authUser ? <Navigate to={'/'} /> : <Signup />} />
         <Route path="hotelscard" element={<Hotels categoryName="hotels" details={hotelsObj} />} />
@@ -49,7 +49,8 @@ export default function App() {
         <Route path="womenswearcard" element={<Womenswear categoryName="women's wear" details={womenswearObj} />} />
         <Route path="nurseriescard" element={<Nurseries categoryName="nurseries" details={nurseriesObj} />} />
       </Routes>
-      <Toaster />
+      <Footer />
+      {/* <Toaster /> */}
     </>
   );
 }

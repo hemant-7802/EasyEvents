@@ -53,14 +53,14 @@ export default function Heropage({ className }) {
     ]
   };
   return (
-    <div id="home" className={`slider-container overflow-hidden ${className}`}>
+    <div id="home" className={`slider-container overflow-hidden ${className} ${authUser ? "h-[250px]":""}`}>
       <Slider {...settings} className=" iPhone6+and7+and8+:hidden iPhone4and4S:hidden" key={slidersdetails.id}>
         {slidersdetails.map((image) =>
           <div className="relative" key={image.id}>
-            <Image src={image.download_url} alt={image.author} isZoomed isBlurred radius="none" className=" self-center brightness-50 h-[650px] w-[1800px] iPadPro10.5:w-[1024px] iPad1and2andMiniandAir:w-[800px] iPad1and2andMiniandAir:h-[400px]" />
+            <Image src={authUser ? (image.download_url) : (image.download_url)} alt={image.author} isZoomed isBlurred radius="none" className=" self-center brightness-50 h-[650px] w-[1800px] iPadPro10.5:w-[1024px] iPad1and2andMiniandAir:w-[800px] iPad1and2andMiniandAir:h-[400px]" />
             <div id="content-sec" className="absolute z-10 top-[20%] right-[10%] max-w-[50%] text-right">
-              <h1 className="heading_text text-8xl text-white capitalize iPadPro12.9:text-6xl iPad1and2andMiniandAir:text-5xl iPhone6+and7+and8+:text-4xl iPhone6and6Sand7and8:text-3xl iPhone4and4S:text-xl">{image.heading}</h1>
-              <h2 id="subheading-tag" className="text-4xl iPadPro12.9:text-2xl iPad1and2andMiniandAir:text-xl iPhone6+and7+and8+:text-lg iPhone6and6Sand7and8:text-md iPhone4and4S:text-sm">{image.sub_heading}</h2>
+              <h1 className={`${authUser ? 'hidden' : 'block'} heading_text text-8xl text-white capitalize iPadPro12.9:text-6xl iPad1and2andMiniandAir:text-5xl iPhone6+and7+and8+:text-4xl iPhone6and6Sand7and8:text-3xl iPhone4and4S:text-xl`}>{image.heading}</h1>
+              <h2 id="subheading-tag" className={`${authUser ? 'hidden' : 'block'} text-4xl iPadPro12.9:text-2xl iPad1and2andMiniandAir:text-xl iPhone6+and7+and8+:text-lg iPhone6and6Sand7and8:text-md iPhone4and4S:text-sm`}>{image.sub_heading}</h2>
               <p className="text-2xl my-3 text-white/80 iPadPro12.9:text-md iPad1and2andMiniandAir:text-sm iPhone6and6Sand7and8:hidden iPhone4and4S:hidden">{image.disc}</p>
               <Link to={authUser ? "/" : "/signup"}>
                 <Button className="bg-emerald-900 text-white capitalize">

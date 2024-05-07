@@ -4,16 +4,12 @@ import { MdLocationPin } from "react-icons/md";
 import { TbPhoneCall } from "react-icons/tb";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { Link } from 'react-router-dom';
-import Nav from './navbar/Nav';
-import Footer from './footer/Footer';
 
 export default function Maincard({ title, cardname }) {
     return (
-        <>
-        <Nav />
         <div className="py-8 px-4 sm:py-12 xl:mx-auto xl:max-w-7xl xl:px-6">
             <div className="sm:flex sm:items-center sm:justify-between">
-                <h2 className="text-2xl font-bold tracking-tight capitalize"><Link to="/" className='p-1'><IoMdArrowRoundBack className='inline-block' /></Link> {title}</h2>
+                <h2 className="text-2xl font-bold tracking-tight capitalize"><Link to="/" onClick={(e) => { e.render() }} className='p-1'><IoMdArrowRoundBack className='inline-block' /></Link> {title}</h2>
             </div>
             <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 lg:max-w-7xl">
                 {cardname.map((cards) => {
@@ -44,7 +40,5 @@ export default function Maincard({ title, cardname }) {
                 })}
             </div>
         </div>
-        <Footer />
-        </>
     )
 }

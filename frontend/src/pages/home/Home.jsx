@@ -1,24 +1,25 @@
 import React from 'react'
-import Nav from '../../components/navbar/Nav'
 import Heropage from '../../components/heropage/Heropage'
 import WhyUs from '../../components/whyus/WhyUs'
 import About from '../../components/about us/About'
 import Team from '../../components/ourteam/Team'
 import Review from '../../components/Customer_Review/Review'
 import Map_contact from '../../components/map & contact/Map_contact'
-import Footer from '../../components/footer/Footer'
+import Categories from '../../components/category/Categories'
+import { useAuthContext } from '../../context/authContext'
 
 const Home = () => {
+  const { authUser } = useAuthContext()
+
   return (
     <>
-      <Nav />
       <Heropage />
+      {authUser ? <Categories /> : ''}
       <WhyUs />
-      <About />
-      <Team />
+      {authUser ? '' : <About />}
+      {authUser ? '' : <Team />}
       <Review />
       <Map_contact />
-      <Footer />
     </>
   )
 }

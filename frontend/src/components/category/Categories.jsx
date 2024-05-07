@@ -15,6 +15,7 @@ function Categories() {
             <div className="min-w-screen-xl absolute flex space-x-2 px-4 sm:px-6 lg:px-8 xl:relative xl:grid xl:grid-cols-5 xl:gap-x-8 gap-8 xl:space-x-0 xl:px-0">
               {categories.map((category) => (
                 <Link
+                  onClick={(e) => { e.render() }}
                   key={category.name}
                   to={category.to}
                   className="relative flex h-60 w-60 flex-col overflow-hidden rounded-lg p-4 hover:brightness-75 cursor-pointer xl:w-auto">
