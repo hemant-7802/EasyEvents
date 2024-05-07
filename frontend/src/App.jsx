@@ -31,8 +31,8 @@ export default function App() {
       <Nav />
       <Routes>
         <Route path="/" handle={(e) => e.render()} element={<Home />} />
-        <Route path="/login" element={authUser ? <Navigate to={'/'} /> : <Login />} />
-        <Route path="/signup" element={authUser ? <Navigate to={'/'} /> : <Signup />} />
+        <Route path="/login" handle={(e) => e.render()} element={authUser ? <Navigate to={'/'} /> : <Login />} />
+        <Route path="/signup" handle={(e) => e.render()} element={authUser ? <Navigate to={'/'} /> : <Signup />} />
         <Route path="hotelscard" element={<Hotels categoryName="hotels" details={hotelsObj} />} />
         <Route path="gardencard" element={<Gardens categoryName='gardens' details={gardensObj} />} />
         <Route path="cateringcard" element={<Caterings categoryName="caterings" details={cateringsObj} />} />
