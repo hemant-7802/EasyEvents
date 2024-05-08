@@ -26,13 +26,14 @@ import Footer from "./components/footer/Footer";
 
 export default function App() {
   const { authUser } = useAuthContext()
+
   return (
     <>
       <Nav />
       <Routes>
-        <Route path="/" handle={(e) => e.render()} element={<Home />} />
-        <Route path="/login" handle={(e) => e.render()} element={authUser ? <Navigate to={'/'} /> : <Login />} />
-        <Route path="/signup" handle={(e) => e.render()} element={authUser ? <Navigate to={'/'} /> : <Signup />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={authUser ? <Navigate to={'/'} /> : <Login />} />
+        <Route path="/signup" element={authUser ? <Navigate to={'/'} /> : <Signup />} />
         <Route path="hotelscard" element={<Hotels categoryName="hotels" details={hotelsObj} />} />
         <Route path="gardencard" element={<Gardens categoryName='gardens' details={gardensObj} />} />
         <Route path="cateringcard" element={<Caterings categoryName="caterings" details={cateringsObj} />} />
@@ -50,7 +51,7 @@ export default function App() {
         <Route path="nurseriescard" element={<Nurseries categoryName="nurseries" details={nurseriesObj} />} />
       </Routes>
       <Footer />
-      {/* <Toaster /> */}
+      <Toaster />
     </>
   );
 }

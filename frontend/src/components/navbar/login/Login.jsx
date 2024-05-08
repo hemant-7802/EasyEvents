@@ -15,6 +15,14 @@ export default function Login() {
   const { loading, login } = useLogin()
   const { authUser } = useAuthContext()
 
+  const validateEmail = (email) => email.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/i);
+
+  const isInvalid = React.useMemo(() => {
+    if (email === "") return false;
+
+    return validateEmail(email) ? false : true;
+  }, [email]);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     await login(email, password)
@@ -29,10 +37,14 @@ export default function Login() {
             endContent={
               <MailIcon className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
             }
+            autoFocus
             placeholder="Enter your email"
             variant="underlined"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            isInvalid={isInvalid}
+            color={isInvalid ? "danger" : ""}
+            errorMessage={isInvalid && "Please enter a valid email"}
           />
           <Input
             endContent={
@@ -45,7 +57,7 @@ export default function Login() {
             onChange={(e) => setPassword(e.target.value)}
           />
           <div className='text-right text-sm'>
-            <p>Don't have an account? <span className='text-purple-500 font-medium underline underline-offset-2 hover:text-purple-600 transition-all duration-150'><Link to="/signup">Sign Up</Link></span></p>
+            <p>Don't have an account? <span className='text-purple-500 font-medium underline underline-offset-2 hover:text-purple-600 transition-all duration-150'><Link onClick={(e) => e.render()} to="/signup">Sign Up</Link></span></p>
           </div>
           <div className='w-full'>
             <Button type="submit" className={`login-btn bg-sky-500 rounded-lg w-full py-1 hover:bg-sky-600 text-gray-300`} disabled={loading}>

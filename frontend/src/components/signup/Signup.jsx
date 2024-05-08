@@ -17,7 +17,6 @@ export default function Signup() {
     password: '',
     confirmPassword: '',
   })
-  console.log(inputs)
 
   const { loading, signup } = useSignup()
 
@@ -57,7 +56,7 @@ export default function Signup() {
   }
 
   return (
-    <div className="flex h-screen flex-1 p-4">
+    <div className="flex h-full flex-1 p-4">
       <div className="flex flex-1 flex-col justify-center px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24 shadow-lg rounded-t-lg">
         <div className="mx-auto w-full max-w-sm lg:w-96">
           <div>
@@ -82,7 +81,7 @@ export default function Signup() {
                   <Input variant="underlined" id="confirmPassword" name="confirmPassword" type="password" autoComplete="confirmPassword" placeholder="Confirm Password" onChange={(e) => setInputs({ ...inputs, confirmPassword: e.target.value })} value={inputs.confirmPassword} />
                 </div>
                 <div className='text-right text-sm'>
-                  <p>Already have an account? <span className='text-purple-500 font-medium underline underline-offset-2 hover:text-purple-600 transition-all duration-150'><Link to="/login">Login</Link></span></p>
+                  <p>Already have an account? <span className='text-purple-500 font-medium underline underline-offset-2 hover:text-purple-600 transition-all duration-150'><Link onClick={(e) => e.render()} to="/login">Login</Link></span></p>
                 </div>
                 <div className="mt-2">
                   <button
@@ -119,7 +118,7 @@ export default function Signup() {
                               className="px-4 py-2 border flex gap-2 border-slate-200 dark:border-slate-700 rounded-lg hover:border-slate-400 dark:hover:border-slate-500 hover:text-slate-900 dark:hover:text-slate-300 hover:shadow transition duration-150"
                             >
                               <img
-                                class="w-6 h-6"
+                                className="w-6 h-6"
                                 src="https://www.svgrepo.com/show/475656/google-color.svg"
                                 loading="lazy"
                                 alt="google logo"
